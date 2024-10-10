@@ -1,167 +1,440 @@
 <!DOCTYPE HTML>
-<!--
-	CONSULTORA BI by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>CONSULTORA BI</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+<html lang="es">
+    <head>
+        <title>PymeInside - Optimización Contable y BI con IA</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <!-- JavaScript Libraries -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://unpkg.com/d3-chord@1"></script>
+        <script src="https://unpkg.com/d3-array@2"></script>
+        <script src="https://unpkg.com/d3-scale@3"></script>
+        <script src="https://unpkg.com/d3-shape@1"></script>
+        <script src="https://unpkg.com/d3-path@1"></script>
+        <script src="https://unpkg.com/d3-format@1"></script>
+        <script src="https://unpkg.com/d3-color@1"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+        <!-- Firebase Libraries -->
+        <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    </head>
+    <body class="landing is-preload">
+        <!-- Powered by IA Generativa -->
+        <div class="powered-by-ia">
+            <p>Powered by Generative AI</p>
+        </div>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Consultora BI</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">INICIO</a></li>
-											<li><a href="Servicios.html">Servicios</a></li>
-											<li><a href="Porfolio.html">Porfolio</a></li>
-											<!--<li><li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>-->
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+            <!-- Header -->
+            <header id="header" class="alt">
+                <h1><a href="index.html">PymeInside</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle"><span>Menú</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="Servicios.html">Servicios</a></li>
+                                    <li><a href="Porfolio.html">Porfolio</a></li>
+                                    <li><a href="contacto.html">Contacto</a></li>
+                                    <button id="google-signin-btn">INICIAR SESIÓN</button>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Consultora BI</h2>
-							<p>Potenciamos tu crecimiento<br />
-							con Business Intelligence <br />
-							y servicios contables.</p>
-							<ul class="actions special">
-								<!--<a href="#" class="button primary">Activate</a></li>-->
-								
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Sobre nosotros</a>
-					</section>
+            <!-- Banner -->
+            <section id="banner" class="wrapper" data-aos="fade-up">
+                <div class="particles-wrapper">
+                    <div id="particles-js"></div>
+                </div>
+                <div class="inner">
+                    <h2 data-aos="fade-down">PymeInside</h2>
+                    <p data-aos="fade-up">Transformamos la contabilidad y la gestión empresarial de las Pymes<br />
+                    con Business Intelligence y soluciones de IA.</p>
+                    <ul class="actions special">
+                        <li><a href="#contacto" class="button primary">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <a href="#one" class="more scrolly">Sobre nosotros</a>
+            </section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
+            <!-- One -->
+            <section id="one" class="wrapper style1 special" data-aos="fade-up">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Soluciones Inteligentes para la Gestión Empresarial<br />
+                            Optimiza la Contabilidad y el Análisis de Datos en tu Pyme</h2>
+                        <p>En PymeInside, integramos nuestra experiencia en Business Intelligence y aplicaciones de Inteligencia Artificial para ofrecer soluciones que optimizan tu gestión contable y te permiten tomar decisiones informadas y estratégicas.</p>
+                    </header>
+                    <ul class="icons major">
+                        <li><span class="icon solid fa-chart-line major style1"><span class="label">Análisis</span></span></li>
+                        <li><span class="icon solid fa-brain major style2"><span class="label">IA</span></span></li>
+                        <li><span class="icon solid fa-cogs major style3"><span class="label">Automatización</span></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="wrapper alt style2">
+                <section class="spotlight" data-aos="fade-right">
+                    <div class="image"><img src="images/contabilidad.jpg" alt="Contabilidad Automatizada" /></div>
+                    <div class="content">
+                        <h2>Contabilidad Automatizada</h2>
+                        <p>Ofrecemos soluciones de contabilidad automatizada para Pymes. Desde la gestión de facturas hasta la conciliación bancaria, nuestra IA se asegura de optimizar tus procesos contables y financieros.</p>
+                    </div>
+                </section>
+                <section class="spotlight" data-aos="fade-left">
+                    <div class="image"><img src="images/bi.jpg" alt="Business Intelligence" /></div>
+                    <div class="content">
+                        <h2>Business Intelligence</h2>
+                        <p>Creamos dashboards interactivos que te ayudan a visualizar datos clave de tu negocio, facilitando la toma de decisiones estratégicas basadas en datos. Identifica patrones, analiza KPIs y mejora la rentabilidad de tu Pyme.</p>
+                    </div>
+                </section>
+                <section class="spotlight" data-aos="fade-right">
+                    <div class="image"><img src="images/ai.jpg" alt="Predicción Financiera con IA" /></div>
+                    <div class="content">
+                        <h2>Predicción Financiera con IA</h2>
+                        <p>Utilizamos modelos de predicción basados en inteligencia artificial para proyectar ingresos, gastos y flujo de caja. Esto te permite anticiparte a las necesidades financieras de tu Pyme y mejorar tu estrategia de crecimiento.</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Portfolio -->
+            <section id="portfolio" class="wrapper style2">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Portafolio</h2>
+                        <p>Explora algunos de nuestros proyectos destacados, donde ayudamos a Pymes a optimizar sus procesos contables y de análisis de datos.</p>
+                    </header>
+                    <div class="filters">
+                        <button data-filter="*" class="active">Mostrar Todos</button>
+                        <button data-filter=".publico">Contabilidad</button>
+                        <button data-filter=".privado">Business Intelligence</button>
+                    </div>
+                    <div class="grid">
+                        <div class="element-item publico">
+                            <div class="image"><img src="images/project1.jpg" alt="Proyecto de Contabilidad" /></div>
+                            <h3>Optimización de Contabilidad</h3>
+                            <p>Descripción breve del proyecto contable automatizado.</p>
+                        </div>
+                        <div class="element-item privado">
+                            <div class="image"><img src="images/project2.jpg" alt="Proyecto de BI" /></div>
+                            <h3>Implementación de BI</h3>
+                            <p>Descripción breve del proyecto de BI para toma de decisiones.</p>
+                        </div>
+                        <!-- Más elementos -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits -->
+            <section id="benefits" class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Beneficios de Trabajar con PymeInside</h2>
+                    </header>
+                    <ul class="features">
+                        <li class="icon solid fa-lightbulb">
+                            <h3>Mejora en la Toma de Decisiones</h3>
+                            <p>Convierte datos en insights valiosos para crear estrategias efectivas y adaptativas.</p>
+                        </li>
+                        <li class="icon solid fa-clock">
+                            <h3>Eficiencia Operativa</h3>
+                            <p>Automatiza procesos contables y reduce tiempos, aumentando la productividad.</p>
+                        </li>
+                        <li class="icon solid fa-chart-pie">
+                            <h3>Optimización de Recursos</h3>
+                            <p>Mejora la rentabilidad identificando oportunidades y minimizando riesgos financieros.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+		            <!-- Data Visualization -->
+					<section id="data-visualization-section" class="wrapper style3" data-aos="fade-up">
 						<div class="inner">
 							<header class="major">
-								<h2>Expertos en Datos y Finanzas <br />
-									al Servicio de tu Crecimiento</h2>
-								<p>Contamos con especialistas dedicados en Business Intelligence y servicios contables que, a través<br />
-									de un enfoque colaborativo, garantizan soluciones personalizadas para optimizar tus decisiones<br />
-									financieras. Innovación, confianza y resultados son nuestra prioridad.</p>
+								<h2>Comparativa de Beneficios: Contabilidad Manual vs Automatizada</h2>
+								<p>Descubre cómo nuestras soluciones de contabilidad y Business Intelligence mejoran la eficiencia en la gestión de tu Pyme.</p>
 							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-folder major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-user major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+							<div id="d3-graph-container"></div> <!-- Aquí irá el gráfico -->
+		
+							<p>Este radar chart muestra la comparación de beneficios entre la contabilidad manual y automatizada, así como el impacto del BI en la toma de decisiones financieras de las Pymes.</p>
+		
+							<ul>
+								<li><strong>Contabilidad Manual</strong>: Involucra procesos manuales lentos y propensos a errores. La visualización y el análisis de los datos son limitados.</li>
+								<li><strong>Contabilidad Automatizada</strong>: Optimiza los procesos contables, reduce errores, y mejora la calidad de los datos para la toma de decisiones.</li>
+								<li><strong>BI con IA</strong>: La combinación de BI e IA potencia todas las dimensiones evaluadas, ofreciendo insights predictivos y una mejor visualización de los datos financieros.</li>
 							</ul>
+		
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Característica</th>
+											<th>Contabilidad Manual</th>
+											<th>Contabilidad Automatizada</th>
+											<th>BI con IA</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>Eficiencia</strong></td>
+											<td>Procesos lentos y manuales</td>
+											<td>Automatización de tareas clave</td>
+											<td>Optimización con IA en tiempo real</td>
+										</tr>
+										<tr>
+											<td><strong>Calidad de los datos</strong></td>
+											<td>Propensa a errores</td>
+											<td>Mayor precisión con validaciones</td>
+											<td>Detección de patrones y anomalías con IA</td>
+										</tr>
+										<tr>
+											<td><strong>Visualización de datos</strong></td>
+											<td>Limitada a hojas de cálculo</td>
+											<td>Dashboards interactivos</td>
+											<td>Visualización predictiva y prescriptiva</td>
+										</tr>
+										<tr>
+											<td><strong>Toma de decisiones</strong></td>
+											<td>Basada en intuición</td>
+											<td>Datos precisos para decisiones informadas</td>
+											<td>Decisiones basadas en análisis predictivo</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</section>
-
-				<!-- Two -->
-				<section id="Two" class="wrapper style2 special">
-					<div class="inner">
-						<header class="major">
-							<h2>Beneficios de Nuestros Servicios</h2>
-							<ul>
-							<li><strong>Toma de decisiones informada:</strong>Transforma datos en información valiosa para una gestión estratégica.</li>
-							<li><strong>Eficiencia contable:</strong> Automatización y control en procesos contables para mayor precisión y ahorro de tiempo.<br /></li>
-							<li><strong>Optimización de recursos:</strong> Mejora la rentabilidad mediante el análisis de tendencias y patrones financieros.<br /></li>
-							<li><strong>Personalización </strong>Soluciones adaptadas a las necesidades específicas de tu negocio.<br /></li>
-							<li><strong>Cumplimiento normativo</strong> Garantizamos la exactitud y cumplimiento de las regulaciones contables vigentes.</li>
-							</ul>
-						</header>
-					</div>
-				</section>
-
-				<!-- Three
-					<section id="three" class="wrapper style3 special">
+		
+					<!-- Mapa de Ubicación y Contacto -->
+					<section id="map-contact-section" class="wrapper style3" data-aos="fade-up">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Encuéntranos y Contáctanos</h2>
+								<p>Visítanos o contáctanos para conocer más sobre nuestras soluciones de contabilidad y Business Intelligence.</p>
 							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>-->
-
-				<!-- CTA
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
+							<div class="row">
+								<div class="col-8 col-12-medium">
+									<!-- Aquí se mostrará el mapa con Leaflet -->
+									<div id="map" style="width: 100%; height: 400px;"></div> <!-- Sección para el mapa -->
+								</div>
+								<div class="col-4 col-12-medium">
+									<ul class="contact">
+										<li class="icon solid fa-envelope">
+											<a href="mailto:info@pymeinside.com">info@pymeinside.com</a>
+										</li>
+										<li class="icon solid fa-phone">
+											+549 261 5181225
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</section>
- -->
-				<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="https://marcosnahuel.github.io/">Nahuel Albornoz - HTML5 UP</a></li>
-					</ul>
-				</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+		
+					<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="mailto:info@pymeinside.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; 2024 PymeInside. Todos los derechos reservados.</li>
+							<li>Diseño: <a href="https://marcosnahuel.github.io/">Nahuel Albornoz - HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</div>
+		
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/main.js"></script>
+		
+				<!-- Initialize AOS -->
+				<script>
+					AOS.init({
+						duration: 1000,
+					});
+				</script>
+		
+				<!-- Particles.js Configuration -->
+				<script>
+					particlesJS('particles-js', {
+						"particles": {
+							"number": {
+								"value": 80,
+								"density": {
+									"enable": true,
+									"value_area": 800
+								}
+							},
+							"color": {
+								"value": "#ffffff"
+							},
+							"shape": {
+								"type": "circle",
+								"stroke": {
+									"width": 0,
+									"color": "#000000"
+								},
+								"polygon": {
+									"nb_sides": 5
+								}
+							},
+							"opacity": {
+								"value": 0.5,
+								"random": false,
+								"anim": {
+									"enable": false,
+									"speed": 1,
+									"opacity_min": 0.1,
+									"sync": false
+								}
+							},
+							"size": {
+								"value": 3,
+								"random": true,
+								"anim": {
+									"enable": false,
+									"speed": 40,
+									"size_min": 0.1,
+									"sync": false
+								}
+							},
+							"line_linked": {
+								"enable": true,
+								"distance": 150,
+								"color": "#ffffff",
+								"opacity": 0.4,
+								"width": 1
+							},
+							"move": {
+								"enable": true,
+								"speed": 6,
+								"direction": "none",
+								"random": false,
+								"straight": false,
+								"out_mode": "out",
+								"attract": {
+									"enable": false,
+									"rotateX": 600,
+									"rotateY": 1200
+								}
+							}
+						},
+						"interactivity": {
+							"detect_on": "canvas",
+							"events": {
+								"onhover": {
+									"enable": true,
+									"mode": "repulse"
+								},
+								"onclick": {
+									"enable": true,
+									"mode": "push"
+								},
+								"resize": true
+							},
+							"modes": {
+								"grab": {
+									"distance": 400,
+									"line_linked": {
+										"opacity": 1
+									}
+								},
+								"bubble": {
+									"distance": 400,
+									"size": 40,
+									"duration": 2,
+									"opacity": 8,
+									"speed": 3
+								},
+								"repulse": {
+									"distance": 200
+								},
+								"push": {
+									"particles_nb": 4
+								},
+								"remove": {
+									"particles_nb": 2
+								}
+							}
+						},
+						"retina_detect": true
+					});
+				</script>
+		
+				<!-- D3.js Radar Chart Script -->
+				<script>
+					const data = [
+						{
+							name: "Contabilidad Manual",
+							axes: [
+								{ axis: "eficiencia", value: 30 },
+								{ axis: "calidad", value: 30 },
+								{ axis: "visualizacion", value: 30 },
+								{ axis: "profundidad", value: 30 },
+								{ axis: "decisiones", value: 30 }
+							]
+						},
+						{
+							name: "Contabilidad Automatizada",
+							axes: [
+								{ axis: "eficiencia", value: 60 },
+								{ axis: "calidad", value: 50 },
+								{ axis: "visualizacion", value: 65 },
+								{ axis: "profundidad", value: 55 },
+								{ axis: "decisiones", value: 70 }
+							]
+						},
+						{
+							name: "BI + IA",
+							axes: [
+								{ axis: "eficiencia", value: 90 },
+								{ axis: "calidad", value: 85 },
+								{ axis: "visualizacion", value: 95 },
+								{ axis: "profundidad", value: 90 },
+								{ axis: "decisiones", value: 95 }
+							]
+						}
+					];
+		
+					const radarChartOptions = {
+						w: 500,
+						h: 500,
+						margin: { top: 50, right: 50, bottom: 50, left: 50 },
+						maxValue: 100,
+						levels: 5,
+						roundStrokes: true,
+						color: d3.scaleOrdinal().range(["#EDC951", "#CC333F", "#00A0B0"]),
+						format: '.0f'
+					};
+		
+					RadarChart("#d3-graph-container", data, radarChartOptions);
+				</script>
+			</body>
+		</html>
+		
