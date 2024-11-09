@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CONSULTORA BI - PORFOLIO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">Consultoría BI CUYO</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Inicio</a></li>
+									<li><a href="Servicios.html">Servicios</a></li>
+									<li><a href="Porfolio.html">Portafolio</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<article id="main">
+				<header>
+					<h2>Portafolio de Proyectos</h2>
+					<p>Descubre algunos de los trabajos que hemos realizado en Consultoría BI CUYO</p>
+				</header>
+				<section class="wrapper style5">
+					<div class="inner">
+
+						<!-- Proyecto 1 -->
+						<h3>Automatización de Informes Financieros</h3>
+						<p>Implementamos un sistema de automatización de informes en tiempo real para una entidad gubernamental, optimizando la toma de decisiones y el control de presupuestos.</p>
+						<img src="assets/images/proyecto1.jpg" alt="Automatización de Informes Financieros" style="width:100%; height:auto;">
+						
+						<!-- Proyecto 2 -->
+						<div class="powerbi-embed">
+							<h4>Dashboards Interactivos</h4>
+							<iframe title="Dashboard 1" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNDZiYmRkYTctMjhjNy00NWZjLTg5OTYtNWJkYjk2NjkxZTM1IiwidCI6ImNhNThkMmE2LWViNTAtNDJhNi04MmVmLWYzYzY3NDM4MTZhNSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+							<iframe title="Dashboard 2" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZmFiNmU5MmYtZGY4Yy00NDNjLTgzMjEtMTQ1N2M0MTEwZjY3IiwidCI6ImNhNThkMmE2LWViNTAtNDJhNi04MmVmLWYzYzY3NDM4MTZhNSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+							<iframe title="Dashboard 3" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGZkM2E2MGQtNjVjOC00Nzk2LTk1MDAtYjQ2ZTNlMTM0ZmU4IiwidCI6ImNhNThkMmE2LWViNTAtNDJhNi04MmVmLWYzYzY3NDM4MTZhNSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+						</div>
+
+						<!-- Proyecto 3 -->
+						<h3>Optimización de Marketing con IA</h3>
+						<p>Implementamos soluciones de inteligencia artificial para optimizar campañas de marketing digital, logrando un aumento del 25% en la conversión de clientes potenciales.</p>
+						<!-- Video de YouTube -->
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/4kHoZMDB1J0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://youtu.be/wJUXGCBf06Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</section>
+			</article>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li><li>Design: <a href="https://marcosnahuel.github.io/">Nahuel Albornoz - HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Chatbot Widget -->
+		<div id="chatbot-widget">
+		    <img src="images/bot-icon.png" alt="Bot Copilot" id="bot-icon">
+		    <div id="chatbot-container" class="hidden">
+		        <iframe src="https://copilotstudio.microsoft.com/environments/Default-ca58d2a6-eb50-42a6-82ef-f3c6743816a5/bots/cr21b_proyectoPresupuesto2025/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+		        <button id="close-btn">X</button>
+		    </div>
+		</div>
+
+		<!-- Scripts para el Chatbot -->
+		<script>
+		    document.getElementById('bot-icon').addEventListener('click', function() {
+		        var chatbotContainer = document.getElementById('chatbot-container');
+		        chatbotContainer.style.display = chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '' ? 'block' : 'none';
+		    });
+
+		    document.getElementById('close-btn').addEventListener('click', function() {
+		        document.getElementById('chatbot-container').style.display = 'none';
+		    });
+		</script>
+
+		<!-- Estilos para el widget del chatbot -->
+		<style>
+		    /* Estilos para el widget del chatbot */
+		    #chatbot-widget {
+		        position: fixed;
+		        bottom: 20px;
+		        right: 20px;
+		        z-index: 1000;
+		    }
+
+		    #bot-icon {
+		        width: 60px;
+		        height: 60px;
+		        cursor: pointer;
+		        border-radius: 50%;
+		        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+		    }
+
+		    #chatbot-container {
+		        position: fixed;
+		        bottom: 90px;
+		        right: 20px;
+		        width: 350px;
+		        height: 500px;
+		        border: 2px solid #ccc;
+		        border-radius: 10px;
+		        background-color: white;
+		        display: none;
+		        z-index: 1001;
+		        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+		    }
+
+		    #chatbot-container iframe {
+		        width: 100%;
+		        height: 100%;
+		        border: none;
+		        border-radius: 10px;
+		    }
+
+		    #close-btn {
+		        position: absolute;
+		        top: 10px;
+		        right: 10px;
+		        background-color: red;
+		        color: white;
+		        border: none;
+		        border-radius: 50%;
+		        cursor: pointer;
+		        font-size: 14px;
+		        width: 25px;
+		        height: 25px;
+		        display: flex;
+		        align-items: center;
+		        justify-content: center;
+		    }
+
+		    .hidden {
+		        display: none;
+		    }
+		</style>
+	</body>
+</html>
+
