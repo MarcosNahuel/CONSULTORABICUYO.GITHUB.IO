@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Panel de Usuario</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <h1>Panel de Usuario</h1>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <section>
+                <h2>Bienvenido</h2>
+                <p id="user-info">Cargando datos del usuario...</p>
+
+                <h3>Informes Personalizados</h3>
+                <iframe title="Informe Power BI" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGZkM2E2MGQtNjVjOC00Nzk2LTk1MDAtYjQ2ZTNlMTM0ZmU4IiwidCI6ImNhNThkMmE2LWViNTAtNDJhNi04MmVmLWYzYzY3NDM4MTZhNSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+            </section>
+        </div>
+
+ <!-- Firebase App (CDN) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<!-- Firebase Authentication (CDN) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+<script>
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyC2VK-Hxs5ak7Cob6eWozaZia4avduk8F4",
+    authDomain: "govia-505c5.firebaseapp.com",
+    projectId: "govia-505c5",
+    storageBucket: "govia-505c5.appspot.com",
+    messagingSenderId: "906079889260",
+    appId: "1:906079889260:web:d609395d33acc1534e3549"
+  };
+
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Autenticación
+  const auth = firebase.auth();
+
+  // Manejo del Google Sign-In
+  const signInBtn = document.getElementById('google-signin-btn');
+  if (signInBtn) {
+    signInBtn.addEventListener('click', function() {
+      console.log('Botón de Iniciar sesión clickeado');
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithRedirect(provider);
+    });
+  }
+
+  // Manejar el redireccionamiento después de la autenticación
+  auth.getRedirectResult().then((result) => {
+    if (result.user) {
+      console.log('Login exitoso, redirigiendo a user.html...');
+      window.location.href = "/user.html";  // Redirige a la página personalizada
+    }
+  }).catch((error) => {
+    console.error("Error al iniciar sesión: ", error);
+  });
+</script>
+
+    </body>
+</html>
