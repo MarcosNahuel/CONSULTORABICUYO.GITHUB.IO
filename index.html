@@ -5,9 +5,9 @@
 -->
 <html lang="es">
     <head>
-        <title>Pyme INSIDE a vergaaaa</title>
+        <title>Pyme INSIDE</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=no" />
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -119,15 +119,43 @@
                 background-color: #357ae8;
             }
 
-
-
+            .logo-container {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1000;
+            }
+            
+            .corner-logo {
+                width: 100px;
+                height: auto;
+                opacity: 0.9;
+                transition: opacity 0.3s ease;
+            }
+            
+            .corner-logo:hover {
+                opacity: 1;
+            }
+            
+            /* ...existing code... */
+            
+            @media screen and (max-width: 768px) {
+                .corner-logo {
+                    width: 80px;
+                }
+            }
 
         </style>
     </head>
     <body class="landing is-preload">
+        <!-- Agregar logo -->
+        <div class="logo-container">
+            <img src="LOGO.svg" alt="PYMEINSIDE Logo" class="corner-logo">
+        </div>
+        
         <!-- Powered by IA Generativa -->
         <div class="powered-by-ia">
-            <p>Powered by Generative AI y la concha de tu hermana</p>
+            <p>Powered by Generative </p>
         </div>
 
         <!-- Page Wrapper -->
@@ -909,4 +937,3 @@
 		
 			</body>
 		</html>
-		
